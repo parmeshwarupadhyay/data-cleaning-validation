@@ -67,3 +67,5 @@ df.to_csv("OnlineRetail_Cleaned.csv", index=False)
 print("Cleaned dataset saved as OnlineRetail_Cleaned.csv")
 
 
+# Extra Practice Ideas:
+# - Run SQL queries on cleaned dataset
