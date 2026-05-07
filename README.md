@@ -1,14 +1,23 @@
-# data-cleaning-validation
-In this project i used a dataset from kaggle for data cleaning and validate data with sql queries
-<BR>
-AUTHOR - PARMESHWAR UPADHYAY
-# Online Retail Dataset - Data Cleaning & Validation
-# Purpose: Practice data cleaning, formatting, and validation
+# Data Cleaning & Validation – Online Retail Dataset
 
+In this project I used a dataset from Kaggle for **data cleaning with Python** and **data validation with SQL queries**.
 
-# Step 1: Import Libraries
+**Author:** Parmeshwar Upadhyay
+
+---
+
+## 📌 Purpose
+Practice data cleaning, formatting, and validation using Python (pandas) and SQL (MySQL).
+
+---
+
+## 🐍 Python Workflow
+
+### Step 1: Import Libraries
+```python
 import pandas as pd
 import numpy as np
+
 
 # Step 2: Load Dataset
 # Adjust path if needed
