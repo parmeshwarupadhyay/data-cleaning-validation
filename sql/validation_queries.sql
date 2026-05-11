@@ -21,5 +21,20 @@ FROM onlineretail
 ORDER BY UnitPrice DESC
 LIMIT 10;
 
+--4. Duplicates and Aggregates
+SELECT InvoiceNo, StockCode, COUNT(*) AS line_count          -- Check for duplicates
+FROM onlineretail_aggregated
+GROUP BY InvoiceNo, StockCode
+HAVING COUNT(*) > 1;
+
+CREATE VIEW onlineretail_aggregated AS      -- Aggregated view for avoiding duplicates
+SELECT 
+    InvoiceNo,
+    StockCode,
+    SUM(Quantity) AS total_quantity,
+    MIN(UnitPrice) AS unit_price,   -- or AVG(UnitPrice) if you prefer
+    SUM(Quantity * UnitPrice) AS line_total
+FROM onlineretail
+GROUP BY InvoiceNo, StockCode;
 
 
