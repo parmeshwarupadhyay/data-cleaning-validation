@@ -14,6 +14,7 @@ CREATE TABLE onlineretail (
     UnitPrice DECIMAL(10,2),
     CustomerID INT,
     Country VARCHAR(50)
+    TotalPrice Decimal(10,2)
 );
 
 
