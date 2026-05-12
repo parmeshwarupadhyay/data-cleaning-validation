@@ -16,6 +16,12 @@ SQL queries are in [sql/validation_queries.sql](sql/validation_queries.sql).
 
 All SQL queries are stored in [`sql/validation_queries.sql`](sql/validation_queries.sql).
 
+ Import into MySQL
+- Create database:
+  ```sql
+  CREATE DATABASE datavalidation;
+  USE datavalidation;
+
 Example checks include:
 - Row counts & uniqueness
 - Invalid values (negative quantities, zero prices, cancellations)
