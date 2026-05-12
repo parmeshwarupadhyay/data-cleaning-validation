@@ -2,6 +2,21 @@
 -- Author: Parmeshwar
 -- Purpose: Practice SQL data validation checks
 
+-- create table and database
+create database datavalidation
+use datavalidation
+CREATE TABLE onlineretail (
+    InvoiceNo VARCHAR(20),
+    StockCode VARCHAR(20),
+    Description TEXT,
+    Quantity INT,
+    InvoiceDate DATETIME,
+    UnitPrice DECIMAL(10,2),
+    CustomerID INT,
+    Country VARCHAR(50)
+);
+
+
 -- 1. Basic Integrity
 SELECT COUNT(*) AS total_rows FROM onlineretail;                                -- Total row count
 SELECT COUNT(DISTINCT CustomerID) AS unique_customers FROM onlineretail;        -- Distinct customers
