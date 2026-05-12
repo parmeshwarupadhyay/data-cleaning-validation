@@ -37,4 +37,22 @@ SELECT
 FROM onlineretail
 GROUP BY InvoiceNo, StockCode;
 
+-- Ensure TotalPrice column is consistent
+SELECT InvoiceNo, StockCode, Quantity, UnitPrice, TotalPrice,
+       (Quantity * UnitPrice) AS calculated_total
+FROM onlineretail
+WHERE TotalPrice <> (Quantity * UnitPrice);
+
+-- Check invoice date range
+SELECT MIN(InvoiceDate) AS start_date, MAX(InvoiceDate) AS end_date
+FROM onlineretail;
+
+-- Customers with unusually high spend
+SELECT CustomerID, SUM(TotalPrice) AS total_spent
+FROM onlineretail
+GROUP BY CustomerID
+ORDER BY total_spent DESC
+LIMIT 10;
+
+
 
