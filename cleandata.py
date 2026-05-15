@@ -21,6 +21,7 @@ import numpy as np
 
 # Step 2: Load Dataset
 # Adjust path if needed
+```python
 df = pd.read_csv(r"C:\ProgramData\MySQL\MySQL Server 8.0\Uploads\OnlineRetail.csv", encoding="ISO-8859-1")
 
 # Inspect dataset
@@ -29,6 +30,7 @@ print(df.info())
 df.head()
 
 # Step 3: Handle Missing Values
+```python
 print("Missing values per column:\n", df.isnull().sum())
 
 # Drop rows with missing CustomerID (exists in this dataset)
@@ -40,13 +42,16 @@ print(f'After dropping missing CustomerID: {len(df):,}')
 df["Description"] = df["Description"].fillna("Unknown")
 
 # Step 4: Remove Duplicates
+```python
 df = df.drop_duplicates()
 
 # Step 5: Validate Data Ranges
+```python
 # Quantity and UnitPrice must be positive
 df = df[(df["Quantity"] > 0) & (df["UnitPrice"] > 0)]
 
 # Step 6: Format Date
+```python
 df["InvoiceDate"] = pd.to_datetime(df["InvoiceDate"], errors="coerce", dayfirst=False)
 
 df = df[~df['InvoiceNo'].astype(str).str.startswith('C')]
@@ -57,9 +62,11 @@ df = df[df['UnitPrice'] > 0]
 print(f'After removing bad unit prices: {len(df):,}')
 
 # Step 7: Derived Columns
+```python
 df["TotalPrice"] = df["Quantity"] * df["UnitPrice"]
 
 # Step 8: Validation Checks
+```python
 # InvoiceNo should be string, cancellations start with 'C'
 invalid_invoices = df[~df["InvoiceNo"].astype(str).str.isnumeric()]
 print("Sample cancelled invoices:\n", invalid_invoices.head())
@@ -72,6 +79,7 @@ print(f'Unique customers: {df["CustomerID"].nunique():,}')
 print(f'Unique invoices:  {df["InvoiceNo"].nunique():,}')
 
 # Step 9: Save Cleaned Data
+```python
 df.to_csv("OnlineRetail_Cleaned.csv", index=False)
 print("Cleaned dataset saved as OnlineRetail_Cleaned.csv")
 
