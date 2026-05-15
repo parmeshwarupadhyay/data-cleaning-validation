@@ -1,8 +1,8 @@
 # Data Cleaning & Validation – Online Retail Dataset
 
-In this project I used a dataset from Kaggle for **data cleaning with Python** and **data validation with SQL queries**.
+In this project I used a dataset from Kaggle for data cleaning with Python and data validation with SQL queries.
 
-**Author:** Parmeshwar Upadhyay
+Author: Parmeshwar Upadhyay
 
 ---
 
@@ -14,7 +14,6 @@ Practice data cleaning, formatting, and validation using Python (pandas) and SQL
 ## 🐍 Python Workflow
 
 ### Step 1: Import Libraries
-```python
 import pandas as pd
 import numpy as np
 
