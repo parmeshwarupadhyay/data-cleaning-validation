@@ -1,15 +1,11 @@
 # Data Cleaning & Validation – Online Retail Dataset
 
-In this project I used a dataset from Kaggle for data cleaning with Python and data validation with SQL queries.
+#bIn this project I used a dataset from Kaggle for data cleaning with Python and data validation with SQL queries.
 
-Author: Parmeshwar Upadhyay
+# Author: Parmeshwar Upadhyay
 
----
-
-## 📌 Purpose
-Practice data cleaning, formatting, and validation using Python (pandas) and SQL (MySQL).
-
----
+##  Purpose
+# Practice data cleaning, formatting, and validation using Python (pandas) and SQL (MySQL).
 
 ## 🐍 Python Workflow
 
@@ -19,7 +15,7 @@ import numpy as np
 
 # Step 2: Load Dataset
 # Adjust path if needed
-df = pd.read_csv(r"C:\ProgramData\MySQL\MySQL Server 8.0\Uploads\OnlineRetail.csv", encoding="ISO-8859-1")
+df = pd.read_csv(r"C:\Users\parme\Downloads\OnlineRetail.csv", encoding="ISO-8859-1")
 
 # Inspect dataset
 print("Shape:", df.shape)
