@@ -1,0 +1,41 @@
+Shape: (541909, 8)
+<class 'pandas.DataFrame'>
+RangeIndex: 541909 entries, 0 to 541908
+Data columns (total 8 columns):
+ #   Column       Non-Null Count   Dtype  
+---  ------       --------------   -----  
+ 0   InvoiceNo    541909 non-null  str    
+ 1   StockCode    541909 non-null  str    
+ 2   Description  540455 non-null  str    
+ 3   Quantity     541909 non-null  int64  
+ 4   InvoiceDate  541909 non-null  str    
+ 5   UnitPrice    541909 non-null  float64
+ 6   CustomerID   406829 non-null  float64
+ 7   Country      541909 non-null  str    
+dtypes: float64(2), int64(1), str(5)
+memory usage: 33.1 MB
+None
+Missing values per column:
+InvoiceNo           0
+StockCode           0
+Description      1454
+Quantity            0
+InvoiceDate         0
+UnitPrice           0
+CustomerID     135080
+Country             0
+dtype: int64
+After dropping missing CustomerID: 406,829
+After removing cancellations: 392,692
+After removing bad unit prices: 392,692
+Sample cancelled invoices:
+Empty DataFrame
+Columns: [InvoiceNo, StockCode, Description, Quantity, InvoiceDate, UnitPrice, CustomerID, Country, TotalPrice]
+Index: []
+Max UnitPrice: 8142.75
+
+Final shape: (392692, 9)
+Date range: 2010-12-01 → 2011-12-09
+Unique customers: 4,338
+Unique invoices:  18,532
+Cleaned dataset saved as OnlineRetail_Cleaned.csv
