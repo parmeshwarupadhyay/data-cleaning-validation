@@ -1,14 +1,14 @@
-\# Online Retail Dataset - Data Cleaning \& Validation
+# Online Retail Dataset - Data Cleaning \& Validation
 
 
 
-\# Problem Statement
+# Problem Statement
 
 Retail businesses often struggle with maintaining clean, reliable, and actionable customer transaction data. The Online Retail dataset, which contains thousands of invoices, customer IDs, product descriptions, quantities, and prices, suffers from common issues such as duplicate records, canceled orders, missing customer information, and inconsistent pricing. These anomalies reduce the accuracy of sales reporting, hinder customer behavior analysis, and limit the ability to make data‑driven decisions.
 
 
 
-\# About the Project
+# About the Project
 
 This project aims to design and implement a robust data cleaning and validation pipeline using Python, SQL, and Excel.
 
@@ -16,45 +16,41 @@ Handles 500k+ rows of data which can be used for visualization and reporting.
 
 
 
-\## Workflow
+## Workflow
 
-1. \*\*Data Import \& Inspection\*\*
+1. **Data Import \& Inspection**
 * Load raw dataset into Python.
 * Check for missing values, duplicates, and anomalies.
 
-2\. \*\*Data Cleaning (Python)\*\*
+2\. **Data Cleaning (Python)**
 
 * Handle null values in CustomerID.
 * Remove duplicate rows and canceled invoices.
 * Validating positive Quantity, non-zero UnitPrice.
 * Check if TotalPrice is derived from Quantity and Unitprice that is TotalPrice = Quantity × UnitPrice.
 
-3\. \*\*Data Validation (SQL)\*\*
+3\. **Data Validation (SQL)**
 
 * Import cleaned data into MySQL.
 * Run validation queries to check:
-
-&#x20;      Duplicate invoice lines
-
-&#x20;      Negative quantities or zero prices
-
-&#x20;      Customer spend consistency
-
-&#x20;      Outlier detection
+    Duplicate invoice lines
+    Negative quantities or zero prices
+    Customer spend consistency
+    Outlier detection
 
 
 
-\## Features
+## Features
 
-* \*\*Anomaly Detection:\*\* Flags duplicates, cancellations, and invalid values.
-* \*\*Deduplication:\*\* Ensures unique invoice and customer records.
-* \*\*Validation Queries:\*\* SQL scripts for integrity checks and spend analysis.
-* \*\*Scalable Workflow:\*\* Python + SQL pipeline that can be reused for other datasets.
-* \*\*Business Insights:\*\* Clean data supports accurate reporting and dashboards.
+* **Anomaly Detection:** Flags duplicates, cancellations, and invalid values.
+* **Deduplication:** Ensures unique invoice and customer records.
+* **Validation Queries:** SQL scripts for integrity checks and spend analysis.
+* **Scalable Workflow:** Python + SQL pipeline that can be reused for other datasets.
+* **Business Insights:** Clean data supports accurate reporting and dashboards.
 
 
 
-\# Data Source
+# Data Source
 
 The Dataset was sourced from Kaggle
 
@@ -64,7 +60,7 @@ It is a messy data which needs cleaning and validation against business logic be
 
 
 
-\# Tools \& Technologies Used
+# Tools \& Technologies Used
 
 Programming languages: Python, SQL
 
@@ -76,7 +72,7 @@ Tools: Excel, Git
 
 
 
-\# Implementation Details
+# Implementation Details
 
 Scripts Python/cleandata.py and SQL/validation\_queries.sql
 
@@ -85,10 +81,10 @@ Before running the code make sure to add the path to the dataset file in python 
 ```python
 
 df = pd.read\_csv(r"path to the raw dataset file", encoding="ISO-8859-1")
+```
 
 
-
-\# Results \& Insights
+# Results \& Insights
 
 Dropped 135080 missing Customer ID
 
@@ -98,7 +94,7 @@ Found Duplicates of Invoiceno and Stockcode which were still there upon performi
 
 
 
-\# Challenges Faced
+# Challenges Faced
 
 The raw Online Retail dataset had lot of issues like:
 
@@ -110,7 +106,7 @@ Legitimate multi‑line purchases needed to be checked if it were error(duplicat
 
 
 
-\# Future Improvements
+# Future Improvements
 
 Handling different formats like JSON, Excel, XML etc
 
